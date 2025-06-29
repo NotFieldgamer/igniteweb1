@@ -1,0 +1,62 @@
+.skill-bar {
+  margin-bottom: 1.5rem;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: var(--color-light-gray-200);
+}
+
+.skill-percentage {
+  font-weight: 600;
+  color: var(--color-light-gray-300);
+}
+
+.skill-progress {
+  height: 10px;
+  background-color: var(--color-gray-800);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-progress-fill {
+  height: 100%;
+  width: 0; /* Initial width before animation */
+  background: linear-gradient(to right, var(--color-accent-indigo), var(--color-accent-violet));
+  border-radius: 5px;
+  transition: width 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skill-progress-fill.animate {
+  width: var(--skill-width, 0%);
+}
+
+/* Animation delay for staggered effect */
+.skill-bar:nth-child(1) .skill-progress-fill {
+  transition-delay: 0.1s;
+}
+
+.skill-bar:nth-child(2) .skill-progress-fill {
+  transition-delay: 0.2s;
+}
+
+.skill-bar:nth-child(3) .skill-progress-fill {
+  transition-delay: 0.3s;
+}
+
+.skill-bar:nth-child(4) .skill-progress-fill {
+  transition-delay: 0.4s;
+}
+
+.skill-bar:nth-child(5) .skill-progress-fill {
+  transition-delay: 0.5s;
+}

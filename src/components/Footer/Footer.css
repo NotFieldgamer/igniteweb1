@@ -1,0 +1,73 @@
+/**
+ * Footer Component Styles
+ * 
+ * Defines the visual appearance of the website footer including:
+ * - Dark background with subtle top border
+ * - Appropriate padding and spacing
+ * - Light gray text for readability
+ * - Centered content layout
+ * - Hover effects for interactive elements
+ */
+
+.footer {
+  background-color: var(--color-gray-900);
+  padding: 2rem 0;
+  color: var(--color-light-gray-400);
+  border-top: 1px solid var(--color-gray-700);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+/* Copyright text */
+.copyright {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Legal links section */
+.legal-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+}
+
+/* Separator between links */
+.separator {
+  color: var(--color-gray-600);
+}
+
+/* Individual legal links */
+.legal-link {
+  color: var(--color-light-gray-400);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.legal-link:hover,
+.legal-link:focus {
+  color: var(--color-accent-indigo);
+  text-decoration: underline;
+}
+
+/* Focus state for accessibility */
+.legal-link:focus-visible {
+  outline: 2px solid var(--color-accent-indigo);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
